@@ -13,14 +13,17 @@ abieos C++ library depends on a recent version of CMake (>=3.11) and GCC8. Pleas
 
 This is the most comfortable to use, as we can just package the library as a wheel file and ship it. Patch to `CMakeLists.txt` is required to be able to build abieos as a static library.
 
-First you need to build abieos library itself:
+First you need to build abieos library itself (our flow):
 
 ```shell
-$ git submodule update --init-recursive
+$ git submodule update --init --recursive
 $ mkdir external/abieos/build
 $ cd external/abieos/build
 $ cmake ..
 $ make
+$ python setup.py build
+$ python3.9 -m pip install -e . (in subdirecotry)
+
 ```
 
 Then you can simply build the package using `setuptools`.
