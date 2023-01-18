@@ -1,4 +1,4 @@
 [submodule "external/abieos"]
 	path = external/abieos
-	url = https://github.com/EOSIO/abieos.git
+	url = https://github.com/EOSIO/abieos
 	branch = eosio-2.1.x
